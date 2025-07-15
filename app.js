@@ -42,11 +42,11 @@ const app = express();
 
 // ✅ CORS middleware (must be near the top)
 app.use(cors({
-  origin: ["localhost:5173", "https://litwits.in"], // ✅ allow frontend domains
+  origin: ["http://localhost:5173", "https://litwits.in"], // ✅ your frontend domains
   methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true, // only if you're using cookies/auth
 }));
-
 // Middleware to capture raw body ONLY for Razorpay Webhook
 app.use("/api/payments/webhook", bodyParser.json({
   verify: (req, res, buf) => {
