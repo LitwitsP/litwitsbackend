@@ -42,7 +42,7 @@ const app = express();
 
 // ✅ CORS middleware (must be near the top)
 app.use(cors({
-  origin: ["http://localhost:3000", "https://litwits.in"], // ✅ allow frontend domains
+  origin: ["localhost:5173", "https://litwits.in"], // ✅ allow frontend domains
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
