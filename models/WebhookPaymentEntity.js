@@ -17,9 +17,9 @@ const webhookPaymentEntitySchema = new mongoose.Schema({
   card_id: String,
   bank: String,
   wallet: String,
-  vpa: String,
-  email: String,
-  contact: String,
+   // vpa: String,
+  customer_email: String,
+  // contact: String,
   notes: mongoose.Schema.Types.Mixed,  // to store shipping address etc.
   fee: Number,
   tax: Number,
